@@ -185,7 +185,7 @@ def main():
                     enviar_correo_incapacidad(archivo, destinatario, nombre, fecha, area_pe)
                     st.success("Incapacidad enviada correctamente.")
 # Vacaciones
-    with tabs[5]:
+    with tabs[3]:
         st.markdown("<h3 style='color: #19277F;'>Solicitar Vacaciones ☀️🌴</h3>", unsafe_allow_html=True)
         # Calculo de vacaciones
         st.markdown("<hr style='border: none; height: 4px; background-color: #fab70e;'>", unsafe_allow_html=True)
@@ -282,6 +282,7 @@ if __name__ == "__main__":
 
 
                       
+
 
 
 
