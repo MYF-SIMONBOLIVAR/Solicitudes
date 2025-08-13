@@ -39,4 +39,54 @@ def enviar_correo_incapacidad(archivo, destinatario, nombre, fecha, area_pe):
     if archivo:
         yag.send(to=destinatario, subject=asunto, contents=[cuerpo, archivo])
     else:
+
         yag.send(to=destinatario, subject=asunto, contents=cuerpo)
+
+def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe):
+    import yagmail
+
+    yag = yagmail.SMTP(EMAIL, EMAIL_PASSWORD)
+
+    # Asunto del correo
+    asunto = f"Solicitud de Vacaciones - {nombre}"
+
+    # Cuerpo del correo mejorado con HTML
+    cuerpo = f"""
+    <html>
+        <body style="font-family: Arial, sans-serif; color: #333;">
+            <h3 style="color: #0056b3;">Solicitud de Vacaciones</h3>
+            <p style="font-size: 16px;">
+                Estimado(a) 
+                El empleado <b>{nombre}</b> ha solicitado sus vacaciones con la siguiente información:<br><br>
+                
+                <b>Fecha de inicio:</b> {fecha_inicio}<br>
+                <b>Fecha de fin:</b> {fecha_fin}<br>
+                <b>Área de trabajo:</b> {area_pe}<br><br>
+
+                <p>Por favor, confirma la aprobación de las vacaciones o proporciona cualquier comentario o requerimiento adicional.</p>
+
+                <hr style="border: 1px solid #ccc;"/>
+                <p style="font-size: 14px;">
+                    Quedamos atentos a cualquier comentario o requerimiento adicional.<br><br>
+                    Atentamente,<br>
+                    <i>Área de TI</i>
+                </p>
+            </p>
+        </body>
+    </html>
+    """
+
+    #Lista de destinatarios
+    destinatarios = [
+        correo_jefe,
+        "tic3@repuestossimonbolivar.com"  # Correo adicional si es necesario
+    ]
+
+    # Eliminar duplicados si hay
+    destinatarios = list(set(destinatarios))
+
+    # Enviar correo
+    if archivo:
+        yag.send(to=destinatarios, subject=asunto, contents=[cuerpo, archivo])
+    else:
+        yag.send(to=destinatarios, subject=asunto, contents=cuerpo)
