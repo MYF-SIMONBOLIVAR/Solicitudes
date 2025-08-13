@@ -1,0 +1,117 @@
+[
+    {
+        "empleado": "SEBASTIAN ",
+        "fecha": "2025-07-21",
+        "horas": 2,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "registrado_en": "2025-07-21 11:23:34"
+    },
+    {
+        "empleado": "Sebastain",
+        "fecha": "2025-07-23",
+        "horas": 1,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "registrado_en": "2025-07-23 08:47:28"
+    },
+    {
+        "empleado": "Sebastian Villada Bran",
+        "fecha": "2025-07-24",
+        "horas": 2,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "registrado_en": "2025-07-24 11:08:27"
+    },
+    {
+        "empleado": "Sebastian Villada",
+        "fecha": "2025-08-11",
+        "horas": 0.25,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Tiempo",
+        "registrado_en": "2025-08-11 14:55:36"
+    },
+    {
+        "empleado": "sebastian",
+        "fecha": "2025-08-11",
+        "horas": 0.1,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Seleccione un medio de pago",
+        "registrado_en": "2025-08-11 14:55:45"
+    },
+    {
+        "empleado": "sebastian",
+        "fecha": "2025-08-11",
+        "horas": 0.1,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Nomina",
+        "registrado_en": "2025-08-11 14:55:50"
+    },
+    {
+        "empleado": "sebastian",
+        "fecha": "2025-08-11",
+        "horas": 0.25,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Tiempo",
+        "registrado_en": "2025-08-11 14:56:14"
+    },
+    {
+        "empleado": "Sebastian Villada",
+        "fecha": "2025-08-11",
+        "horas": 0.25,
+        "horas_int": 0,
+        "minutos": 15,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Tiempo",
+        "registrado_en": "2025-08-11 14:58:33"
+    },
+    {
+        "empleado": "Sebastian Villada",
+        "fecha": "2025-08-11",
+        "horas": 0.25,
+        "horas_int": 0,
+        "minutos": 15,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Tiempo",
+        "registrado_en": "2025-08-11 14:59:40"
+    },
+    {
+        "empleado": "Sebastian Villada",
+        "fecha": "2025-08-11",
+        "horas": 1.25,
+        "horas_int": 1,
+        "minutos": 15,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Tiempo",
+        "registrado_en": "2025-08-11 15:00:15"
+    },
+    {
+        "empleado": "sebas",
+        "fecha": "2025-08-12",
+        "horas": 1.0,
+        "horas_int": 1,
+        "minutos": 0,
+        "tipo": "diurnas",
+        "area": "TI",
+        "pago": "Nomina",
+        "registrado_en": "2025-08-12 13:04:03"
+    },
+    {
+        "empleado": "Rafael",
+        "fecha": "2025-08-12",
+        "horas": 1.0,
+        "horas_int": 1,
+        "minutos": 0,
+        "tipo": "diurnas",
+        "area": "Logistica",
+        "pago": "Nomina",
+        "registrado_en": "2025-08-12 13:04:03"
+    }
+]
