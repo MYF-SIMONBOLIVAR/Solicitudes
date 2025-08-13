@@ -177,7 +177,7 @@ def enviar_correo_dia_familia_agrupado(registros):
 def generar_pdf_dia_familia(registros):
     pdf = FPDF()
     pdf.add_page()
-    pdf.image("plantillaSM.png", x=0, y=0, w=210, h=297)
+
     pdf.set_font("Arial", size=12)
     pdf.cell(0, 10, "Solicitud Día de la Familia", ln=True, align="C")
     pdf.ln(10)
@@ -294,4 +294,5 @@ def enviar_correo_vacaciones(registro):
         yag.send(to=[destinatario, destinatario1], subject=asunto, contents=cuerpo)
         print("Correo enviado con éxito.")
     except Exception as e:
+
         print(f"Error al enviar el correo: {e}")
