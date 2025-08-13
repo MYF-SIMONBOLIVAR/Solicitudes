@@ -1,4 +1,5 @@
 streamlit
 yagmail
 workalendar
+fpdf
 pandas
