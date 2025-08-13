@@ -56,7 +56,7 @@ def main():
     tabs = st.tabs(["Día de la Familia", "Permisos", "Incapacidades", "Vacaciones"])
    
 #Día de la Familia
-    with tabs[2]:
+    with tabs[0]:
         #titulo de la pestaña
         st.markdown("<h3 style='color: #19277F;'>Solicitar Día de la Familia 🏠</h3>", unsafe_allow_html=True)       
         num2 = st.number_input("¿Cuántos empleados solicitan el día de la familia?", 1, 20, 1)
@@ -102,7 +102,7 @@ def main():
                     enviar_correo_dia_familia_agrupado(registros)
                     st.success("Día de la Familia registrado y correo enviado.")
 #Permisos   
-    with tabs[3]:
+    with tabs[1]:
         #titulo de la pestaña
         st.markdown("<h3 style='color: #19277F;'>Registrar Permiso 📆</h3>", unsafe_allow_html=True)        
         #Campo para registrar tipo permisos
@@ -149,7 +149,7 @@ def main():
                 # Mostrar mensaje de éxito
                 st.success("Permiso registrado y notificacion enviada correctamente.")
 #Incapacidades
-    with tabs[4]:
+    with tabs[2]:
         st.markdown("<h3 style='color: #19277F;'>Registrar Incapacidad 🏥</h3>", unsafe_allow_html=True)       
         nombre= st.text_input("Nombre empleado", key="in_nombre")
         fecha = st.date_input("Fecha de registro de la incapacidad", key="in_fecha")          
@@ -177,7 +177,7 @@ def main():
                     enviar_correo_incapacidad(archivo, destinatario, nombre, fecha, area_pe)
                     st.success("Incapacidad enviada correctamente.")
 # Vacaciones
-    with tabs[5]:
+    with tabs[3]:
         st.markdown("<h3 style='color: #19277F;'>Solicitar Vacaciones ☀️🌴</h3>", unsafe_allow_html=True)
         # Calculo de vacaciones
         st.markdown("<hr style='border: none; height: 4px; background-color: #fab70e;'>", unsafe_allow_html=True)
@@ -274,3 +274,4 @@ if __name__ == "__main__":
 
 
                       
+
