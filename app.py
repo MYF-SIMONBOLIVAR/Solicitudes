@@ -263,7 +263,7 @@ def main():
                     }
 
                     # Llamar a la función para enviar el correo
-                    enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe)
+                    enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe, correo_em)
                 
                     # Mostrar mensaje de éxito
                     st.success(f"Vacaciones solicitadas para {nombre} desde {fecha_inicio} hasta {fecha_fin}.")
@@ -282,6 +282,7 @@ if __name__ == "__main__":
 
 
                       
+
 
 
 
