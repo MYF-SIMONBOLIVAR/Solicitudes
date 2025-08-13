@@ -42,41 +42,47 @@ def enviar_correo_incapacidad(archivo, destinatario, nombre, fecha, area_pe):
 
         yag.send(to=destinatario, subject=asunto, contents=cuerpo)
 
-def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe):
+def enviar_correo_vacaciones(archivo, correo_jefe, correo_em, nombre, fecha_inicio, fecha_fin, area_pe):
     import yagmail
 
     yag = yagmail.SMTP(EMAIL, EMAIL_PASSWORD)
 
     # Asunto del correo
     asunto = f"Solicitud de Vacaciones - {nombre}"
- # Cuerpo del correo mejorado con HTML
+
+    # Cuerpo del correo mejorado con HTML
     cuerpo = f"""
     <html>
         <body style="font-family: Arial, sans-serif; color: #333;">
             <h3 style="color: #0056b3;">Solicitud de Vacaciones</h3>
             <p style="font-size: 16px;">
-                Estimado(a) 
+                Estimado(a) <b>{correo_jefe}</b>,<br><br>
                 El empleado <b>{nombre}</b> ha solicitado sus vacaciones con la siguiente información:<br><br>
-                 <b>Fecha de inicio:</b> {fecha_inicio}<br>
+                
+                <b>Fecha de inicio:</b> {fecha_inicio}<br>
                 <b>Fecha de fin:</b> {fecha_fin}<br>
                 <b>Área de trabajo:</b> {area_pe}<br><br>
-            
+
+                <b>Correo del empleado:</b> {correo_em}<br><br> <!-- Aquí agregamos el correo del empleado -->
+
                 <p>Por favor, confirma la aprobación de las vacaciones o proporciona cualquier comentario o requerimiento adicional.</p>
+
                 <hr style="border: 1px solid #ccc;"/>
                 <p style="font-size: 14px;">
                     Quedamos atentos a cualquier comentario o requerimiento adicional.<br><br>
                     Atentamente,<br>
-                    <i>Área de TI</i>
+                    <i>Área de Recursos Humanos</i>
                 </p>
             </p>
         </body>
     </html>
     """
 
-    #Lista de destinatarios
+    # Lista de destinatarios
     destinatarios = [
         correo_jefe,
-        "tic3@repuestossimonbolivar.com"  # Correo adicional si es necesario
+        "tic3@repuestossimonbolivar.com",  # Correo adicional si es necesario
+        correo_em  # Correo del empleado también se añade
     ]
 
     # Eliminar duplicados si hay
@@ -87,6 +93,8 @@ def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_f
         yag.send(to=destinatarios, subject=asunto, contents=[cuerpo, archivo])
     else:
         yag.send(to=destinatarios, subject=asunto, contents=cuerpo)
+
+
 
 
 
