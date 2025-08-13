@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from fpdf import FPDF
 from dotenv import load_dotenv
+import streamlit as st
 
 # Cargar las variables desde el archivo .env
 load_dotenv()
@@ -290,10 +291,11 @@ def enviar_correo_vacaciones(registro):
 
     try:
         # Enviar el correo usando yagmail
-        yag = yagmail.SMTP(os.getenv("EMAIL_REMITENTE"), os.getenv("EMAIL_P"))
+        yag = yagmail.SMTP(st.secrets["EMAIL_REMITENTE"], st.secrets["EMAIL_P"])
         yag.send(to=[destinatario, destinatario1], subject=asunto, contents=cuerpo)
         print("Correo enviado con éxito.")
     except Exception as e:
 
         print(f"Error al enviar el correo: {e}")
+
 
