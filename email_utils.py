@@ -42,7 +42,7 @@ def enviar_correo_incapacidad(archivo, destinatario, nombre, fecha, area_pe):
 
         yag.send(to=destinatario, subject=asunto, contents=cuerpo)
 
-def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe, correo_em):
+def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe):
     import yagmail
 
     yag = yagmail.SMTP(EMAIL, EMAIL_PASSWORD)
@@ -62,7 +62,7 @@ def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_f
                 <b>Fecha de inicio:</b> {fecha_inicio}<br>
                 <b>Fecha de fin:</b> {fecha_fin}<br>
                 <b>Área de trabajo:</b> {area_pe}<br><br>
-                <b<Correo del empleado:</b> {correo_em]<br><br>
+               
 
                 <p>Por favor, confirma la aprobación de las vacaciones o proporciona cualquier comentario o requerimiento adicional.</p>
 
@@ -91,4 +91,5 @@ def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_f
         yag.send(to=destinatarios, subject=asunto, contents=[cuerpo, archivo])
     else:
         yag.send(to=destinatarios, subject=asunto, contents=cuerpo)
+
 
