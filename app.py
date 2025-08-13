@@ -112,7 +112,7 @@ def main():
 #Permisos   
     with tabs[1]:
         #titulo de la pestaña
-        st.markdown("<h3 style='color: #19277F;'>Registrar Permiso 📆</h3>", unsafe_allow_html=True)        
+        st.markdown("<h3 style='color: #19277F;'>Solicitar Permiso 📆</h3>", unsafe_allow_html=True)        
         #Campo para registrar tipo permisos
         tipo_permiso = st.selectbox("Tipo de Permiso", ["Seleccione un tipo","Cita medica","Medio dia", "Dia completo","Diligencia personal","Permiso especial"])
         #Campos para ingresar datos del permiso
@@ -292,6 +292,7 @@ if __name__ == "__main__":
 
 
                       
+
 
 
 
