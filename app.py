@@ -16,7 +16,7 @@ from extras import (
 from datetime import datetime, timedelta
 from io import BytesIO
 from empleados import EMPLEADOS_POR_AREA
-from email_utils import enviar_correo_incapacidad
+from email_utils import enviar_correo_incapacidad,enviar_correo_vacaciones
 from correos import CORREOS_JEFES
 import streamlit as st
 import yagmail
@@ -282,6 +282,7 @@ if __name__ == "__main__":
 
 
                       
+
 
 
 
