@@ -263,7 +263,17 @@ def main():
                     }
 
                     # Llamar a la función para enviar el correo
-                    enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_fin, area_pe)
+                    enviar_correo_vacaciones(
+                        archivo=firma,  # si no hay firma, pasa None
+                        correo_jefe=correo_jefe_input,
+                        correo_em=correo_em,  # correo del empleado
+                        nombre=nombre,
+                        fecha_inicio=fecha_inicio,
+                        fecha_fin=fecha_fin,
+                        area_pe=area_vac
+                    )
+
+                
                 
                     # Mostrar mensaje de éxito
                     st.success(f"Vacaciones solicitadas para {nombre} desde {fecha_inicio} hasta {fecha_fin}.")
@@ -282,6 +292,7 @@ if __name__ == "__main__":
 
 
                       
+
 
 
 
