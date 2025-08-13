@@ -49,8 +49,7 @@ def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_f
 
     # Asunto del correo
     asunto = f"Solicitud de Vacaciones - {nombre}"
-
-    # Cuerpo del correo mejorado con HTML
+ # Cuerpo del correo mejorado con HTML
     cuerpo = f"""
     <html>
         <body style="font-family: Arial, sans-serif; color: #333;">
@@ -58,14 +57,11 @@ def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_f
             <p style="font-size: 16px;">
                 Estimado(a) 
                 El empleado <b>{nombre}</b> ha solicitado sus vacaciones con la siguiente información:<br><br>
-                
-                <b>Fecha de inicio:</b> {fecha_inicio}<br>
+                 <b>Fecha de inicio:</b> {fecha_inicio}<br>
                 <b>Fecha de fin:</b> {fecha_fin}<br>
                 <b>Área de trabajo:</b> {area_pe}<br><br>
-               
-
+            
                 <p>Por favor, confirma la aprobación de las vacaciones o proporciona cualquier comentario o requerimiento adicional.</p>
-
                 <hr style="border: 1px solid #ccc;"/>
                 <p style="font-size: 14px;">
                     Quedamos atentos a cualquier comentario o requerimiento adicional.<br><br>
@@ -91,5 +87,6 @@ def enviar_correo_vacaciones(archivo, correo_jefe, nombre, fecha_inicio, fecha_f
         yag.send(to=destinatarios, subject=asunto, contents=[cuerpo, archivo])
     else:
         yag.send(to=destinatarios, subject=asunto, contents=cuerpo)
+
 
 
