@@ -236,7 +236,7 @@ def enviar_correo_permiso(registro):
 def generar_pdf_permiso(registro):
     pdf = FPDF()
     pdf.add_page()
-    pdf.image("plantillaSM.png", x=0, y=0, w=210, h=297)
+    
     pdf.set_font("Arial", size=12)
     pdf.cell(0, 10, "Solicitud de Permiso", ln=True, align="C")
     pdf.ln(10)
@@ -296,3 +296,4 @@ def enviar_correo_vacaciones(registro):
     except Exception as e:
 
         print(f"Error al enviar el correo: {e}")
+
