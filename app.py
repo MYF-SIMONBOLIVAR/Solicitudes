@@ -18,6 +18,14 @@ from io import BytesIO
 from empleados import EMPLEADOS_POR_AREA
 from email_utils import enviar_correo_incapacidad
 from correos import CORREOS_JEFES
+import streamlit as st
+import yagmail
+
+EMAIL = st.secrets["EMAIL_REMITENTE"]
+EMAIL_PASSWORD = st.secrets["EMAIL_P"]
+
+yag = yagmail.SMTP(EMAIL, EMAIL_PASSWORD)
+
 # Constantes para archivos
 ARCHIVO_DIA_FAMILIA = "dia_familia.json"
 # Función para obtener los días de la semana
@@ -274,5 +282,6 @@ if __name__ == "__main__":
 
 
                       
+
 
 
