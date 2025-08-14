@@ -240,7 +240,7 @@ def main():
         correo_jefe_input = st.text_input("Correo del jefe directo", value=correo_jefe, key="vac_jefe")
 
         # Firma del empleado
-        firma = st.file_uploader("Adjuntar firma del empleado", type=["png", "jpg", "jpeg"], key="vac_firma")
+        firma = st.file_uploader("Adjuntar firma del empleado", type=["png", "jpg", "jpeg","pdf"], key="vac_firma")
 
         if st.button("Solicitar Vacaciones"):
             if not nombre or not fecha_inicio or not fecha_fin or not area_vac or not correo_jefe_input:
@@ -292,6 +292,7 @@ if __name__ == "__main__":
 
 
                       
+
 
 
 
